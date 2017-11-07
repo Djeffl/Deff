@@ -1,0 +1,137 @@
+$primary_color: #131111;
+$secondary_color: LIGHTSALMON;
+$black: #211A1A;
+$white: #E0D6D6;
+
+html {
+    background: url(../lib/img/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    $headerHeight: 57px;    
+    font-size: 1.6rem;
+    font-family: 'Ubuntu', sans-serif;
+    header#navigation {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        height: $headerHeight;
+        font-size: 2.6rem;        
+        color: rgba($white, 0.95);
+        background-color: $black;
+        text-align: right;
+        ul {
+            margin: 0px 15px;
+            @media only screen and (max-width: 425px){
+                display: none;
+            }
+            li {
+                cursor: pointer;
+                display: inline-block;
+                padding: 15px;
+                transition: color 0.5s;
+                &:hover {
+                    color: $secondary_color;
+                }
+            }
+        }
+    }
+
+    main#content {
+        $marginHeight: 100px;
+        color: $primary_color;
+        background-color: white;
+        margin: $headerHeight+$marginHeight auto $marginHeight auto;
+        height: 100%;
+        width: 90%;
+        transition: background-color 1.5s;
+        padding: 10px 30px;
+        &:hover {
+            background-color: rgba(white, 0.9);
+        }
+        header {
+            color: $secondary_color / 2;
+        }
+        main {
+            margin: 30px 40px;
+        }
+        section#about {
+            main {
+            }
+        }
+    }
+}
+
+
+/* icon basic styles !!!YOU NEED THEM  */
+
+// $accent-color: #7B4B94;
+// $base-bg: lighten($accent-color, 50%);;
+// $basic-icon-color: $secondary_color;
+// //mixins
+// @mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
+//     position: absolute;
+//     top: $top;
+//     left: $left;
+//     right: $right;
+//     bottom: $bottom;
+//   }
+// .menu-icon {
+//   height: 43px;
+//   cursor: pointer;
+//   width: 50px;
+//   position: fixed;
+//   right: 0px;
+  
+//   .bar {
+//     width: 100%;
+//     height: 8px;
+//     background-color: $basic-icon-color; //change on your own mobile menu color
+//     border-radius: 20px;
+    
+//     &-1 {
+//       @include position-absolute($top: 0px, $left: 0);
+//     }
+    
+//     &-2 {
+//       @include position-absolute($top: 17px, $left: 0);
+//     }
+    
+//     &-3 {
+//       @include position-absolute($top: 34px, $left: 0);
+//     }
+//   }
+// }
+
+// .menu-icon {
+//     transition: all 0.2s linear 0s;
+    
+//     .bar {
+//       transition: all 0.2s linear 0s;
+//     }
+    
+//     &.opened {
+//       transform: rotate(90deg);
+      
+//       .bar {
+//         transform: scale(0.3,1);
+//         transform-origin: center center;
+        
+//         &-1 {
+//           transition: all 0.2s linear 0.2s;
+//         }
+        
+//         &-2 {
+//           transition: all 0.2s linear 0.3s;
+//         }
+        
+//         &-3 {
+//           transition: all 0.2s linear 0.4s;
+//         }
+//       }
+//     }
+//   }
