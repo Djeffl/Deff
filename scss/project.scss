@@ -1,9 +1,10 @@
 @mixin rectangle-shape($width) {
     width:  $width;
-    height: 325px;
+    height: 300px;
 }
 
 .project {
+    color: bisque;
     background: url(../lib/img/project-placeholder.png) center no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
