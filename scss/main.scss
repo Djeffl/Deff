@@ -17,6 +17,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     header#navigation {
         position: fixed;
+        z-index: 100;
         width: 100%;
         top: 0px;
         height: $headerHeight;
@@ -42,11 +43,13 @@ body {
     }
 
     main#content {
+        max-width: 1480px;
+        margin: 0 auto;
         $marginHeight: 100px;
         color: $primary_color;
         background-color: white;
         margin: $headerHeight+$marginHeight auto $marginHeight auto;
-        height: 100%;
+        min-height: 100%;
         width: 90%;
         transition: background-color 1.5s;
         padding: 10px 30px;
@@ -55,12 +58,22 @@ body {
         }
         header {
             color: darken($secondary_color, 50%);
+            margin-bottom: 10px;
         }
         main {
             margin: 30px 40px;
         }
         section#about {
             main {
+            }
+        }
+        section#projects {
+            main {
+                max-width: 940px;
+                margin: 0 auto;
+                display: block;
+                text-align: center;
+                
             }
         }
     }

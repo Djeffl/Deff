@@ -1,0 +1,17 @@
+@mixin rectangle-shape($width) {
+    width:  $width;
+    height: 325px;
+}
+
+.project {
+    display: inline-block;
+    min-width: 276px;
+    max-width: 300px;
+    margin: 5px;
+    position: relative;
+    background-color: red;
+    @include rectangle-shape(49%);
+    @media screen and (max-width: 768px) {
+        
+    }
+}
