@@ -4,14 +4,33 @@
 }
 
 .project {
+    background: url(../lib/img/project-placeholder.png) center no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     display: inline-block;
     min-width: 276px;
     max-width: 300px;
     margin: 5px;
     position: relative;
-    background-color: red;
     @include rectangle-shape(49%);
-    @media screen and (max-width: 768px) {
-        
+
+    .overlay {
+        display: none;
+        justify-content: center; /* align horizontal */
+        align-items: flex-end; /* align vertical */
+        padding: 20px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    &:hover .overlay{
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,.5);
+        display: flex;
+        position:absolute;
     }
 }
